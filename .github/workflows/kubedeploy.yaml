@@ -36,5 +36,8 @@ jobs:
       - name: Set AKS credentials
         run: az aks get-credentials --resource-group test --name testteo
 
+      - name: Kubectl
+        run: kubectl get ns
+
       - name: Set up Helm
         uses: azure/setup-helm@v1
