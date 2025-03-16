@@ -16,10 +16,10 @@ jobs:
         uses: azure/setup-helm@v1
 
       - name: Helm lint
-        run: helm lint ./kubedeploy
+        run: helm lint ./com
 
       - name: Helm package
-        run: helm package ./kubedeploy
+        run: helm package ./com
 
   deploy:
     needs: build
