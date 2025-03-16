@@ -41,3 +41,7 @@ jobs:
 
       - name: Set up Helm
         uses: azure/setup-helm@v1
+        
+      - name: Deploy Helm Chart
+        run: helm upgrade --install my-release ./com --namespace test
+        
