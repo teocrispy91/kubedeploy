@@ -16,10 +16,10 @@ jobs:
         uses: azure/setup-helm@v1
 
       - name: Helm lint
-        run: helm lint ./path/to/your/chart
+        run: helm lint ./kubedeploy
 
       - name: Helm package
-        run: helm package ./path/to/your/chart
+        run: helm package ./kubedeploy
 
   deploy:
     needs: build
