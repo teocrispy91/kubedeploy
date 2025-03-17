@@ -35,13 +35,19 @@ jobs:
 
       - name: Set AKS credentials
         run: az aks get-credentials --resource-group test --name testteo
+        env:
+          KUBECONFIG: ${{ runner.temp }}/kubeconfig
+
+      - name: Verify Kubernetes context
+        run: kubectl config current-context
 
       - name: Kubectl
         run: kubectl get ns
 
       - name: Set up Helm
         uses: azure/setup-helm@v1
-        
+
       - name: Deploy Helm Chart
         run: helm upgrade --install my-release ./com --namespace default --debug
-        
+        env:
+          KUBECONFIG: ${{ runner.temp }}/kubeconfig
