@@ -12,3 +12,10 @@ configmap:
 image:
   name: devopsjourney1/mywebapp
   tag: latest
+ingress:
+  enabled: true
+  className: "nginx" # Or your ingressClassName
+  host: "teo.com" # Replace with your domain
+  tls:
+    enabled: true
+    secretName: teo-tls-dev
