@@ -18,4 +18,4 @@ ingress:
   host: "teo.com" # Replace with your domain
   tls:
     enabled: true
-    secretName: teo-tls-dev
+    secretName: teo-tls-de
