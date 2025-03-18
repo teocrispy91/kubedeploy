@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}-nginx-deployment
+  labels:
+        date: "{{ now | unixEpoch }}"
 spec:
   replicas: {{ .Values.nginx.deployment.replicas }}
   selector:
