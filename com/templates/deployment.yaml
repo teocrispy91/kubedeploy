@@ -1,10 +1,7 @@
-# templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}-nginx-deployment
-  labels:
-    date: "{{ now | unixEpoch }}"
 spec:
   replicas: {{ .Values.nginx.deployment.replicas }}
   selector:
@@ -14,6 +11,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        date: "{{ now | unixEpoch }}" # Added the date label here
     spec:
       containers:
       - name: nginx
