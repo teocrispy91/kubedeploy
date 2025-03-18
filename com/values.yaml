@@ -13,9 +13,6 @@ nginx:
     repository: nginx
     tag: latest
     pullPolicy: Always
-  service:
-    type: ClusterIP
-    port: 80
   deployment:
     replicas: 1
     containerPort: 80
@@ -24,10 +21,7 @@ configmap:
   name: myhelmapp-configmap-v1
   data:
     CUSTOM_HEADER: 'This app was deployed with helm!'
-
-image:
-  name: devopsjourney1/mywebapp
-  tag: latest
+    
 ingress:
   enabled: true
   className: "nginx" # Or your ingressClassName
