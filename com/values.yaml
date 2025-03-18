@@ -4,10 +4,6 @@ port: 80
 
 namespace: teonew
 
-
-YAML
-
-# values.yaml
 nginx:
   image:
     repository: nginx
