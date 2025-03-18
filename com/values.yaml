@@ -10,7 +10,7 @@ nginx:
     tag: latest
     pullPolicy: Always
   deployment:
-    replicas: 1
+    replicas: 2
     containerPort: 80
 
 configmap:
