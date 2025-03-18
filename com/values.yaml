@@ -15,7 +15,7 @@ image:
 ingress:
   enabled: true
   className: "nginx" # Or your ingressClassName
-  host: "teo.com" # Replace with your domain
+  host: "www.teo.com" # Replace with your domain
   tls:
     enabled: true
     secretName: teo-tls-de
