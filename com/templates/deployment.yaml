@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}-nginx-deployment
   labels:
-        date: "{{ now | unixEpoch }}"
+    date: "{{ now | unixEpoch }}"
 spec:
   replicas: {{ .Values.nginx.deployment.replicas }}
   selector:
