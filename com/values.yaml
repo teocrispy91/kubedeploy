@@ -2,7 +2,7 @@ appName: myhelmapp
 
 port: 80
 
-namespace: teo
+namespace: teonew
 
 configmap:
   name: myhelmapp-configmap-v1
